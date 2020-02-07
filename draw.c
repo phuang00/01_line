@@ -20,6 +20,12 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
         y0++;
       }
     }
+    else if (A == 0) {
+      while (x0 <= x1) {
+        plot(s, c, x0, y0);
+        x0++;
+      }
+    }
     else {
       double slope = (double)(A) / (-B);
       if (slope > 1) {
